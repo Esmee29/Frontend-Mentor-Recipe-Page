@@ -8,3 +8,198 @@ $Eggshell: hsl(30, 54%, 90%);
 $LightGrey: hsl(30, 18%, 87%);
 $WengeBrown: hsl(30, 10%, 34%);
 $DarkCharcoal: hsl(24, 5%, 18%);
+
+body{
+    background-color: $Eggshell;
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    @media (max-width: 466px){
+        margin: 0;
+    }
+    
+}
+
+.card{
+    background-color: $White;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: clamp(270px, calc(100% - 48px), 736px);
+    background-color: $White;
+    color: $WengeBrown;
+    padding: 40px 40px 39px;
+    border-radius: 23px;
+    margin: 123px 0 124px;
+
+    @media (max-width: 466px){
+        max-width: 100%;
+        border-radius: 0;
+        margin: 0;
+        padding: 0 0 44px;
+    }
+    
+    
+}
+
+img{
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    @media (max-width: 466px){
+        border-radius: 0;
+    }
+}
+
+h1{
+    font-family: 'Young Serif', sans-serif;
+    color: $DarkCharcoal;
+}
+
+h2{
+    color: $Nutmeg;
+    
+}
+
+span{
+    font-weight: 700;
+}
+
+
+.Ingredients li {
+    font-size: 1.0016rem;
+    padding-left: 12px;
+    margin-bottom: 7.8px;
+    margin-left: 28px;
+    list-style: none;
+    position: relative;
+}
+
+.Ingredients h2, .Instructions h2, .Nutrition h2{
+    font-size: 1.75rem;
+    font-family: 'Young Serif', sans-serif;
+    font-weight: 400;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+}
+td, th {
+    font-size: 1.01rem;
+    padding: 12px 0 10.9px 32px;
+}
+
+table tr:not(:last-child) {
+    border-bottom: 1px solid $LightGrey;
+}
+
+th{
+    font-weight: 400;
+}
+
+td{
+    color: $Nutmeg;
+    font-weight: 700;
+    padding-right: 20px;
+}
+.Ingredients li::before {
+    content: "•";
+    position: absolute;
+    left: -0.98em;
+    top: -0.18em;
+    color: var(--color-nutmeg);
+    font-size: 1.36rem;
+}
+
+.Instructions ol {
+    list-style-type: none;
+    counter-reset: list-counter;
+}
+
+.Instructions ol li {
+    counter-increment: list-counter;
+    position: relative;
+    font-size: 1.001rem;
+    padding-left: 15px;
+    margin-left: 25px;
+    margin-bottom: 8px;
+}
+.Instructions ol li::before {
+    content: counter(list-counter) ". ";
+    color: $Nutmeg;
+    font-weight: 700;
+    position: absolute;
+    left: -1.04em;
+}
+
+@media (max-width: 466px) {
+    .card-text{
+        padding: 0 32px;
+    }
+    .prep{
+        line-height: 1.49;
+        border-radius: 15px;
+        margin: 32px 32px 0;
+        padding: 19px 24px 23px;
+        h2{
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+    }
+
+    .card p {
+        font-size: 1rem;
+        margin-top: 24px;
+        padding: 0 32px;
+        line-height: 1.5;
+    }
+    .card h1 {
+        padding: 0 24px;
+        margin: 40px 0 0;
+    }
+
+    .Ingredients,.Instructions, .Nutrition{
+        padding: 0 32px;
+    }
+
+    .Instructions h2 {
+        margin: 33px 0 23px;
+    }
+    .Ingredients li {
+        margin-bottom: 8px;
+        line-height: 1.5;
+        font-size: 1rem;
+        padding: 0;
+    }
+    .Ingredients li::before {
+        left: -1em;
+        top: -0.18em;
+    }
+    
+    .Ingredients li {
+        margin-bottom: 8px;
+        line-height: 1.5;
+        font-size: 1rem;
+    }
+    .Instructions ol {
+        padding: 0;
+    }
+    .instructions ol li {
+        margin-bottom: 8px;
+        line-height: 1.5;
+        font-size: 1rem;
+    }
+    .instructions ol li::before {
+        left: -1.07em;
+    }
+    .Nutrition p {
+        line-height: 1.5;
+        font-size: 1rem;
+        margin-bottom: 12px;
+        padding: 0;
+    }
+}
